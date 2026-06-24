@@ -46,7 +46,7 @@ public class SecurityConfig {
 
         httpSecurity
                 .csrf(csrf -> csrf.disable())
-                .cors(Customizer.withDefaults())
+//                .cors(Customizer.withDefaults())
                 .authorizeHttpRequests(request -> request.
                         requestMatchers("/users/register","/users/login")
                         .permitAll()
