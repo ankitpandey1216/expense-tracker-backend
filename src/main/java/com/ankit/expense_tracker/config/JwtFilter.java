@@ -28,8 +28,8 @@ public class JwtFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-//        String path = request.getServletPath();
-        String path = request.getRequestURI();
+        String path = request.getServletPath();
+//        String path = request.getRequestURI();
 
         // Skip JWT validation for login/register and OPTIONS requests
         if (path.startsWith("/users/login") ||
