@@ -32,8 +32,8 @@ public class JwtFilter extends OncePerRequestFilter {
         String path = request.getRequestURI();
 
         // Skip JWT validation for login/register and OPTIONS requests
-        if (path.equals("/users/login") ||
-                path.equals("/users/register") ||
+        if (path.startsWith("/users/login") ||
+                path.startsWith("/users/register") ||
                 request.getMethod().equals("OPTIONS")) {
 
             filterChain.doFilter(request, response);
