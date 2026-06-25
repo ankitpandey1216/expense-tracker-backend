@@ -63,7 +63,7 @@ public class GroupController {
         return ResponseEntity.ok(response);
     }
 
-    // group details api
+
     @GetMapping("/{groupId}")
     public ResponseEntity<GroupDetailDTO> getGroupDetail(@PathVariable Long groupId,HttpServletRequest request){
         String authHeader = request.getHeader("Authorization");
