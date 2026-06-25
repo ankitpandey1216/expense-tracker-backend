@@ -67,7 +67,7 @@ public class SecurityConfig {
 
         CorsConfiguration config = new CorsConfiguration();
 
-        config.setAllowedOrigins(List.of("https://expense-tracker-frontend-g2xz-4vzg2508c-ankitpandey.vercel.app"));
+        config.setAllowedOrigins(List.of("https://*.vercel.app"));
         config.setAllowedMethods(List.of("GET","POST","PUT","DELETE","OPTIONS"));
         config.setAllowedHeaders(List.of("Authorization","Content-Type","Accept"));
         config.setExposedHeaders(List.of("Authorization"));
